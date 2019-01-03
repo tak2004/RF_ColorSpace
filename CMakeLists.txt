@@ -20,5 +20,6 @@ rcf_endgenerate()
 
 option(RF_COLORSPACE_BUILD_TEST "Enable the tests." OFF)
 if(RF_COLORSPACE_BUILD_TEST)
+    rcf_addpackage(rf_test)
     include("tests/test.cmake")
 endif()
