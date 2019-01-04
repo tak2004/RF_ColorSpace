@@ -1,7 +1,7 @@
 #include "RadonFramework/Drawing/Color/Gradient.hpp"
 #include "RadonFramework/Drawing/Color/Converter.hpp"
 #include "RadonFramework/Drawing/Color/Interpolation.hpp"
-#include "RadonFramework/Diagnostics/Debugging/Assert.hpp"
+#include "RadonFramework/Core/Common/Assert.hpp"
 
 namespace RadonFramework::Drawing::Color
 {
