@@ -44,6 +44,16 @@ struct RGB
 {
   using Type = RF_Type::Float32;
   Type R, G, B;
+  void operator=(RGB Value)
+  {
+    R = Value.R;
+    G = Value.G;
+    B = Value.B;
+  }
+  bool operator!=(RGB Value)
+  {
+    return R == Value.R && G == Value.G && B == Value.B;
+  }
 };
 
 struct LAB

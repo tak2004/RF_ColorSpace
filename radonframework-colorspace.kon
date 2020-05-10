@@ -1,0 +1,30 @@
+description=Radon Framework ColorSpace
+version=1.0.0
+author=Thomas Kunze
+package{
+  ignore[
+    dist
+    .gitignore
+  ]
+}
+build{
+  generator{
+    cmake{
+      source=$(radonframework-colorspace.path)
+      builddir=$(radonframework-colorspace.path)\build
+      creates=$(radonframework-colorspace.path)\dist\RadonFrameworkColorSpace.lib
+      parameters=-DRF_COLORSPACE_COMPILER_STATIC_LINKED_CRT=ON
+    }
+  }
+  export{
+    includes[
+      $(radonframework-colorspace.path)\include
+    ]
+    librarypaths[
+      $(radonframework-colorspace.path)\dist
+    ]
+    libs[
+      RadonFrameworkColorSpace.lib
+    ]
+  }
+}
